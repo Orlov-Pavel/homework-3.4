@@ -1,0 +1,9 @@
+[Unit]
+Description=Run node exporter
+
+[Service]
+EnvironmentFile=/etc/node_exporter_opts/node_exporter_opts
+ExecStart=/node_exporter/node_exporter $extra_opts
+
+[Install]
+WantedBy=multi-user.target
